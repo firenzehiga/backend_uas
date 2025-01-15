@@ -1,4 +1,4 @@
-// import Model Student
+// import Model Alumni
 const Alumni = require("../models/Alumni");
 const { check, validationResult } = require("express-validator");
 class AlumniController {
@@ -242,8 +242,8 @@ class AlumniController {
   }
 }
 
-// Membuat object StudentController
+// Membuat object AlumniController
 const object = new AlumniController();
 
-// Export object StudentController
+// Export object AlumniController
 module.exports = object;

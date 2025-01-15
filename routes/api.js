@@ -1,4 +1,4 @@
-// import StudentController
+// import AlumniController
 const AlumniController = require("../controllers/AlumniController");
 
 const express = require("express");
@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   res.send("Welcome to Alumni API Express");
 });
 
-// student routes
+// Alumni routes
 router.get("/alumni", AlumniController.index); // Route menampilkan semua alumni
 router.post("/alumni", AlumniController.store); // Route menambahkan data alumni
 router.put("/alumni/:id", AlumniController.update); // Route mengedit data alumni

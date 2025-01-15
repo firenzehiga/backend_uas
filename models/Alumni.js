@@ -1,7 +1,7 @@
 // import database
 const db = require("../config/database");
 
-// membuat class Model Student
+// membuat class Model Alumni
 class Alumni {
   /**
    * Membuat method static all.
@@ -20,11 +20,7 @@ class Alumni {
     });
   }
 
-  /**
-   * TODO 1: Buat fungsi untuk insert data.
-   * Method menerima parameter data yang akan diinsert.
-   * Method mengembalikan data student yang baru diinsert.
-   */
+
   static async create(data) {
     const id = await new Promise((resolve, reject) => {
       const sql = "INSERT INTO alumni SET ?";
@@ -35,8 +31,8 @@ class Alumni {
       });
     });
 
-    const student = this.find(id); // Mengembalikan data yang baru diinsert dengan id yang dihasilkan menggunakan find
-    return student;
+    const alumni = this.find(id); // Mengembalikan data yang baru diinsert dengan id yang dihasilkan menggunakan find
+    return alumni;
   }
 
   static find(id) {
